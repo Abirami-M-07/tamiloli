@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ta">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>தமிழொலி | Tamil Text to Speech</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="page">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div class="logo">
+                🎙️ தமிழொலி
+            </div>
+
+            <div class="logo-subtitle">
+                Tamil Text to Speech
+            </div>
+
+        </header>
+
+
+        <!-- Main -->
+        <main>
+
+            <section class="hero">
+
+                <div class="badge">
+                    தமிழ் குரல் தொழில்நுட்பம்
+                    <span>•</span>
+                    Tamil Voice Technology
+                </div>
+
+                <h1>
+                    தமிழ் உரையை குரலாக மாற்றுங்கள்
+                </h1>
+
+                <h2>
+                    Convert Tamil Text into Speech
+                </h2>
+
+                <p>
+                    உங்கள் தமிழ் உரையை உள்ளிட்டு,
+                    தெளிவான குரல் வடிவில் கேளுங்கள்.
+                    <br>
+                    Enter your Tamil text and listen to it as clear audio.
+                </p>
+
+            </section>
+
+
+            <!-- Converter Card -->
+            <section class="converter-card">
+
+                <form method="POST" action="/convert">
+
+                    <label for="text">
+
+                        📝 உங்கள் தமிழ் உரை
+
+                        <span>
+                            / Enter Your Tamil Text
+                        </span>
+
+                    </label>
+
+
+                    <textarea
+                        id="text"
+                        name="text"
+                        placeholder="தமிழ் உரையை இங்கே உள்ளிடவும்...
+Enter your Tamil text here..."
+                        required></textarea>
+
+
+                    <button
+                        type="submit"
+                        class="convert-button">
+
+                        🔊 ஆடியோவாக மாற்று
+                        <span>/ Convert to Audio</span>
+
+                    </button>
+
+                </form>
+
+
+                <!-- Error -->
+                {% if error %}
+
+                    <div class="error">
+
+                        ⚠️
+                        {{ error }}
+
+                    </div>
+
+                {% endif %}
+
+
+                <!-- Audio Result -->
+                {% if audio_file %}
+
+                    <div class="audio-result">
+
+                        <div class="audio-heading">
+
+                            <div class="audio-icon">
+                                🔊
+                            </div>
+
+                            <div>
+
+                                <h2>
+                                    உங்கள் ஆடியோ தயார்!
+                                </h2>
+
+                                <p>
+                                    Audio Generated Successfully!
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <audio controls>
+
+                            <source
+                                src="{{ url_for('static',
+                                filename=audio_file) }}"
+                                type="audio/mpeg">
+
+                            Your browser does not support audio.
+
+                        </audio>
+
+
+                        <a
+                            class="download-button"
+                            href="{{ url_for('static',
+                            filename=audio_file) }}"
+                            download>
+
+                            ⬇️ ஆடியோவை பதிவிறக்கவும்
+                            <span>/ Download Audio</span>
+
+                        </a>
+
+                    </div>
+
+                {% endif %}
+
+            </section>
+
+
+            <!-- How It Works -->
+            <section class="how-section">
+
+                <h2>
+                    எப்படி செயல்படுகிறது?
+                </h2>
+
+                <p>
+                    How does it work?
+                </p>
+
+
+                <div class="steps">
+
+                    <div class="step-card">
+
+                        <div class="step-number">
+                            01
+                        </div>
+
+                        <div class="step-icon">
+                            ✍️
+                        </div>
+
+                        <h3>
+                            உரையை உள்ளிடுங்கள்
+                        </h3>
+
+                        <p>
+                            Enter your Tamil text
+                        </p>
+
+                    </div>
+
+
+                    <div class="step-card">
+
+                        <div class="step-number">
+                            02
+                        </div>
+
+                        <div class="step-icon">
+                            ⚙️
+                        </div>
+
+                        <h3>
+                            குரலாக மாற்றுங்கள்
+                        </h3>
+
+                        <p>
+                            Convert text into speech
+                        </p>
+
+                    </div>
+
+
+                    <div class="step-card">
+
+                        <div class="step-number">
+                            03
+                        </div>
+
+                        <div class="step-icon">
+                            🎧
+                        </div>
+
+                        <h3>
+                            கேட்டு மகிழுங்கள்
+                        </h3>
+
+                        <p>
+                            Listen and download the audio
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- Footer -->
+        <footer>
+
+            <div class="footer-logo">
+                🎙️ தமிழொலி
+            </div>
+
+            <p>
+                தமிழ் உரையை குரலாக மாற்றும் இணைய பயன்பாடு
+            </p>
+
+            <p>
+                A simple web application for Tamil Text-to-Speech
+            </p>
+
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

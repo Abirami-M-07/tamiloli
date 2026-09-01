@@ -1,0 +1,447 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, "Noto Sans Tamil", sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(135deg, #eef2ff, #f8f5ff);
+
+    color: #202040;
+}
+
+
+.page {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 25px;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 0 35px;
+}
+
+
+.logo {
+    font-size: 32px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+.logo-subtitle {
+    background: white;
+
+    padding: 10px 18px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    text-align: center;
+
+    padding: 40px 10px 35px;
+}
+
+
+.badge {
+    display: inline-block;
+
+    padding: 9px 18px;
+
+    background: white;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    margin-bottom: 22px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+
+.badge span {
+    margin: 0 6px;
+}
+
+
+.hero h1 {
+    font-size: 34px;
+
+    line-height: 1.4;
+
+    margin-bottom: 8px;
+}
+
+
+.hero h2 {
+    font-size: 24px;
+
+    font-weight: 500;
+
+    margin-bottom: 18px;
+}
+
+
+.hero p {
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+/* ================= CONVERTER ================= */
+
+.converter-card {
+    max-width: 820px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.10);
+}
+
+
+label {
+    display: block;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    margin-bottom: 13px;
+}
+
+
+label span {
+    font-size: 15px;
+
+    font-weight: normal;
+}
+
+
+textarea {
+    width: 100%;
+
+    min-height: 190px;
+
+    padding: 20px;
+
+    border: 2px solid #e4e4ef;
+
+    border-radius: 18px;
+
+    outline: none;
+
+    resize: vertical;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    font-family:
+        Arial,
+        "Noto Sans Tamil",
+        sans-serif;
+}
+
+
+textarea:focus {
+    border-color: #667eea;
+}
+
+
+.convert-button {
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: #667eea;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.convert-button:hover {
+    opacity: 0.9;
+}
+
+
+.convert-button span {
+    font-weight: normal;
+}
+
+
+/* ================= ERROR ================= */
+
+.error {
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    background: #fff0f0;
+}
+
+
+/* ================= AUDIO ================= */
+
+.audio-result {
+    margin-top: 30px;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background: #f5f6ff;
+}
+
+
+.audio-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+.audio-icon {
+    font-size: 35px;
+}
+
+
+.audio-heading h2 {
+    font-size: 21px;
+
+    margin-bottom: 5px;
+}
+
+
+.audio-heading p {
+    font-size: 14px;
+}
+
+
+audio {
+    width: 100%;
+
+    margin-bottom: 20px;
+}
+
+
+.download-button {
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    border-radius: 12px;
+
+    background: #202040;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+.download-button span {
+    font-weight: normal;
+}
+
+
+/* ================= HOW IT WORKS ================= */
+
+.how-section {
+    text-align: center;
+
+    padding: 65px 0 30px;
+}
+
+
+.how-section > h2 {
+    font-size: 27px;
+
+    margin-bottom: 5px;
+}
+
+
+.how-section > p {
+    font-size: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+.steps {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.step-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.06);
+
+    position: relative;
+}
+
+
+.step-number {
+    position: absolute;
+
+    top: 15px;
+
+    right: 18px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.step-icon {
+    font-size: 32px;
+
+    margin-bottom: 12px;
+}
+
+
+.step-card h3 {
+    font-size: 18px;
+
+    margin-bottom: 7px;
+}
+
+
+.step-card p {
+    font-size: 14px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+
+    margin-top: 55px;
+
+    padding: 30px 10px;
+
+    border-top: 1px solid #ddd;
+
+    line-height: 1.8;
+}
+
+
+.footer-logo {
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+
+footer p {
+    font-size: 14px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+    .header {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+
+    .converter-card {
+        padding: 22px;
+    }
+
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+}
